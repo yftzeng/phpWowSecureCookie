@@ -12,7 +12,7 @@
  * @link     http://blog.gcos.me/
  */
 
-namespace Wow\Security;
+namespace Gcos\Me\Security;
 
 /**
  * Wow Secure Cookie Manager class
