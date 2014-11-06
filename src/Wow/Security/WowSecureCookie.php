@@ -99,13 +99,13 @@ class WowSecureCookie
     public function __construct($secret, $config = null)
     {
         if (empty($secret)) {
-            throw new Exception('You must provide a secret key');
+            throw new \Exception('You must provide a secret key');
         }
 
         $this->secret = $secret;
 
         if ($config !== null && !is_array($config)) {
-            throw new Exception('Config must be an array');
+            throw new \Exception('Config must be an array');
         }
 
         if (is_array($config)) {
@@ -133,7 +133,7 @@ class WowSecureCookie
         }
 
         if (in_array($this->algorithm, openssl_get_cipher_methods()) === false) {
-            throw new Exception('Error while loading mcrypt module');
+            throw new \Exception('Error while loading mcrypt module');
         }
     }
 
@@ -226,7 +226,7 @@ class WowSecureCookie
     ) {
         if ($this->secure_level !==3 ) {
             if (is_null($username)) {
-                throw new Exception('You must provide $username argument');
+                throw new \Exception('You must provide $username argument');
             }
         }
         $expire = is_null($expire) ? time() + $this->expired_time : $expire;
