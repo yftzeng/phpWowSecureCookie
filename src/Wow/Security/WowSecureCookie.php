@@ -46,7 +46,7 @@ class WowSecureCookie
      * Ref: http://www.php.net/manual/en/function.openssl-get-cipher-methods.php
      * @var object
      */
-    protected $algorithm = 'AES-256-CFB';
+    protected $algorithm = 'AES-256-CTR';
 
     /**
      * Salt for Hash algorithm used to hash cookies data
